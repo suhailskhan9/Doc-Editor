@@ -1,8 +1,9 @@
 import  { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import pdfMake from 'pdfmake/build/pdfmake';
-import pdfFonts from 'pdfmake/build/vfs_fonts';
+
+import * as pdfFonts from "pdfmake/build/vfs_fonts.js"; // <-- vfs_fonts has to be imported before pdfmake
+import pdfMake from 'pdfmake';
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
